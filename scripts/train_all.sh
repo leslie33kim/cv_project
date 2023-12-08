@@ -1,11 +1,12 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 DATA_DIR=data
 EXP=logs
-N_GPU=8
+N_GPU=1
 
-DATA_PREFIX=s_h
-SCENES=(forest1 forest2 forest3 garden1 garden2 garden3 indoor playground university1 university2 university3 university4)
-FOVS=(59 89 69 59 69 69 69 69 85 73 73 69)
+DATA_PREFIX=pre_trained
+SCENES=(frames_vid1 frames_vid2 frames_vid3 frames_vid4 frames_vid5 frames_vid6 frames_vid7
+ frames_vid8 frames_vid9 frames_vid10)
+FOVS=(59 89 69 59 69 69 69 69 85 73)
 
 for (( JOB_COMPLETION_INDEX=0; JOB_COMPLETION_INDEX<${#SCENES[@]}; JOB_COMPLETION_INDEX++ )) 
 do
