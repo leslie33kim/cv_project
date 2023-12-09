@@ -163,7 +163,7 @@ def render_test(args):
         subsequence=args.subsequence,
         frame_step=args.frame_step,
     )
-
+    
     if args.ckpt is None:
         logfolder = f"{args.logdir}"
         ckpt_path = f"{logfolder}/checkpoints.th"
@@ -294,7 +294,7 @@ def reconstruction(args):
         }
     else:
         camera_prior = None
-
+hgzvnb,n,
 
     local_tensorfs = LocalTensorfs(
         camera_prior=camera_prior,
