@@ -294,7 +294,6 @@ def reconstruction(args):
         }
     else:
         camera_prior = None
-hgzvnb,n,
 
     local_tensorfs = LocalTensorfs(
         camera_prior=camera_prior,
