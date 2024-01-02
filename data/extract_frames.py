@@ -2,7 +2,7 @@ import os
 import subprocess
 
 #set fps rate 
-def extract_frames(video_path, output_folder, fps=10):
+def extract_frames(video_path, output_folder, fps=30):
     # Extract the video name without extension
     video_name = os.path.splitext(os.path.basename(video_path))[0]
     # Create a subdirectory for each video(frame#_video-name)
@@ -26,7 +26,7 @@ def extract_frames(video_path, output_folder, fps=10):
     # Run the FFmpeg command
     subprocess.run(command)
 
-def process_videos(input_folder, output_folder, fps=10):
+def process_videos(input_folder, output_folder, fps=30):
     if not os.path.exists(input_folder):
         print(f"Error: Input directory '{input_folder}' does not exist.")
         return
@@ -41,5 +41,5 @@ def process_videos(input_folder, output_folder, fps=10):
 if __name__ == "__main__":
     input_folder = 'input_vids'
     output_folder = 'pre_trained'
-    fps = 10  # Adjust fps rate
+    fps = 30  # Adjust fps rate
     process_videos(input_folder, output_folder, fps)
